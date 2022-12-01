@@ -5,13 +5,13 @@ function App() {
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
-	const [passwoard, setPasswoard] = useState("");
+	const [password, setpassword] = useState("");
 	const [showError, setShowError] = useState(false);
 	const [emailIsValid, setEmailIsValid] = useState(false);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (!firstName || !lastName || !email || !passwoard) setShowError(true);
+		if (!firstName || !lastName || !email || !password) setShowError(true);
 
 		/*see if email is valid*/
 		if (!/\S+@\S+\.\S+/.test(email)) {
@@ -87,19 +87,19 @@ function App() {
 					</span>
 
 					<input
-						className={!passwoard && showError ? "input-error" : ""}
-						type="passwoard"
-						placeholder="Passwoard"
-						value={passwoard}
-						onChange={(e) => setPasswoard(e.target.value)}
+						className={!password && showError ? "input-error" : ""}
+						type="password"
+						placeholder="Password"
+						value={password}
+						onChange={(e) => setpassword(e.target.value)}
 					/>
 					<span
 						className="error"
 						style={{
-							display: !passwoard && showError ? "block" : "none",
+							display: !password && showError ? "block" : "none",
 						}}
 					>
-						Passwoard cannot be empty
+						password cannot be empty
 					</span>
 
 					<button type="submit" className="btn-claim-trial">
