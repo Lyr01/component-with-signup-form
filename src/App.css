@@ -127,7 +127,7 @@ body {
 form {
 	display: grid;
 	width: 33.75rem;
-	height: 29.625rem;
+	min-height: 29.625rem;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 8px 2px -2px rgba(212, 206, 206, 0.562);
@@ -151,6 +151,15 @@ form input {
 	font-weight: 500;
 }
 
+.input-error {
+	background-image: url("./images/icon-error.svg");
+	background-repeat: no-repeat;
+	background-position: 95%;
+	margin-bottom: 0.25rem;
+	border: 1px solid var(--red);
+	color: var(--red);
+}
+
 .btn-claim-trial {
 	color: white;
 	text-transform: uppercase;
@@ -159,6 +168,11 @@ form input {
 	background-color: var(--green);
 	box-shadow: 0 4px 2px -2px var(--green);
 	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.btn-claim-trial:hover {
+	background-color: hsl(154, 59%, 70%);
 }
 
 .term-services {
@@ -172,12 +186,24 @@ form input {
 	color: var(--red);
 }
 
-.attribution {
+.error {
+	width: 100%;
+	text-align: end;
 	font-size: 11px;
+	padding-right: 2.5rem;
+	margin-bottom: 1rem;
+	color: var(--red);
+}
+
+.attribution {
+	margin-top: 1rem;
+	font-size: 11px;
+	font-weight: bold;
 	text-align: center;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+	font-weight: bold;
 }
 
 @media only screen and (max-width: 1000px) {
