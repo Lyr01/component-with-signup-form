@@ -22,7 +22,7 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<main className="App">
 			<div className="left-section">
 				<h1 className="title">Learn to code by watching others</h1>
 				<p>
@@ -123,7 +123,7 @@ function App() {
 					</p>
 				</footer>
 			</div>
-		</div>
+		</main>
 	);
 }
 
