@@ -257,6 +257,10 @@ form input {
 		height: 27.625rem;
 	}
 
+	form input {
+		width: 80%;
+	}
+
 	.free-trial {
 		width: 20.4375rem;
 		text-align: center;
