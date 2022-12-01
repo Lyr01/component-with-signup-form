@@ -11,7 +11,15 @@ function App() {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (!firstName || !lastName || !email || !password) setShowError(true);
+		if (
+			!firstName ||
+			!lastName ||
+			!email ||
+			!password ||
+			!/\S+@\S+\.\S+/.test(email)
+		)
+			setShowError(true);
+		else location.reload();
 
 		/*see if email is valid*/
 		if (!/\S+@\S+\.\S+/.test(email)) {
